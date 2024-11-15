@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+<div class="container mt-3 text-light">
+  <div class="mx-auto w-50">
+      <h1 class="text-center">Add Movies - Built in method</h1>
+<form method="POST"  enctype="multipart/form-data">
+    {% csrf_token %}
+
+      <table>
+          {{form.as_table}}
+      </table>
+      <input type="submit">
+    </form>
+  </div>
+
+
+
+
+
+{% endblock %}
